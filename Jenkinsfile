@@ -1,6 +1,7 @@
 pipeline {
     agent any
   
+    stages {
         stage('Deploy') {
             steps {
                 withCredentials([
@@ -12,8 +13,7 @@ pipeline {
                 ]) {
                     sh "scp -r * ${env.if0_34524946}@example1.000.pe:/htdocs/"
                 }
-
             }
         }
     }
-
+}
