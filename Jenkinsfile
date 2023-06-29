@@ -11,7 +11,8 @@ pipeline {
         stage('Build') {
             steps {
                 // Add your build steps here
-                // This could include compiling code, running tests, etc.
+                // For example, you can use Maven or Gradle
+                sh 'mvn clean install' // Placeholder build command
             }
         }
 
