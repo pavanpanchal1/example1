@@ -1,10 +1,9 @@
 pipeline {
     agent any
-    
-    stages {
+        stages {
         stage('Deploy') {
             steps {
-                sh "scp -r ${WORKSPACE}/* root@http:example1.000.pe:/htdocs/"
+                sh "scp -r ${WORKSPACE}/* root@http:example1.000.pe:htdocs/"
             }
         }
     }
