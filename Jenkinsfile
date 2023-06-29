@@ -7,15 +7,7 @@ pipeline {
                 checkout scm
             }
         }
-
-        stage('Build') {
-            steps {
-                // Add your build steps here
-                // For example, you can use Maven or Gradle
-                sh 'mvn clean install' // Placeholder build command
-            }
-        }
-
+   
         stage('Deploy') {
             steps {
                 withCredentials([
